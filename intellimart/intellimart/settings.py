@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&1w0t6oib-t8)f+n%6l5(_ft@!43gc_q-z04xzg!3*v*5$p#&b'
+SECRET_KEY = 'django-insecure-m%hv)0)s3r(*owm4ip+vsg0+g%ur=*t8k$lsu6lir9*2_aph-2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users'
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -75,15 +75,10 @@ WSGI_APPLICATION = 'intellimart.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'intellimart_db',        # Your database name
-        'USER': 'postgres',          # PostgreSQL username
-        'PASSWORD': 'myserver17',  # PostgreSQL password
-        'HOST': 'localhost',             # Or the server IP
-        'PORT': '5432',                  # Default PostgreSQL port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 
 # Password validation
@@ -116,7 +111,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-AUTH_USER_MODEL = 'users.Customer'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/

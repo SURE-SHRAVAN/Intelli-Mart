@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Intelli-Mart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {margin:0;font-family:'SF Pro Display','Inter',sans-serif;background:#000;color:#fff;overflow-x:hidden;}
+    nav {position:fixed;top:0;width:100%;padding:20px 50px;background:rgba(0,0,0,0.7);backdrop-filter:blur(20px);z-index:1000;transition:.3s;}
+    .nav-container{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;}
+    .logo{font-size:32px;font-weight:800;background:linear-gradient(45deg,#007aff,#667eea,#f093fb,#00f2fe);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:glow 3s infinite alternate;}
+    @keyframes glow {0%{text-shadow:0 0 10px #007aff;}100%{text-shadow:0 0 25px #00f2fe,0 0 40px #667eea;}}
+    .nav-links{list-style:none;display:flex;gap:30px;}
+    .nav-links a{color:#fff;text-decoration:none;position:relative;}
+    .nav-links a::after{content:'';position:absolute;left:0;bottom:-5px;width:0;height:2px;background:#00f2fe;transition:.3s;}
+    .nav-links a:hover::after{width:100%;}
+
+    /* Products Grid */
+    .products-section{padding:120px 50px 50px;max-width:1200px;margin:0 auto;}
+    .products-section h2{font-size:2.5rem;margin-bottom:20px;background:linear-gradient(45deg,#fff,#007aff,#00f2fe);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
+    .card{background:rgba(255,255,255,0.05);padding:20px;border-radius:20px;backdrop-filter:blur(20px);transition:.3s;animation:fadeInUp 1s ease;}
+    .card:hover{transform:translateY(-10px) scale(1.05);box-shadow:0 0 20px #00f2fe;}
+    .card img{width:100%;border-radius:15px;margin-bottom:15px;}
+    .card h3{margin:0 0 10px;font-size:1.3rem;}
+    .card p{font-size:0.95rem;color:rgba(255,255,255,0.8);}
+    .card button{margin-top:10px;padding:10px 20px;border:none;border-radius:50px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;cursor:pointer;font-weight:600;transition:.3s;}
+    .card button:hover{transform:scale(1.08);}
+
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Intelli-Mart</div>
+      <ul class="nav-links">
+        <li><a href="intelli_mart_landing.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="products-section">
+    <h2>Electronics</h2>
+    <div class="grid">
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Laptop"><h3>Laptop</h3><p>High-performance laptop for work & gaming.</p><button>Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Smartphone"><h3>Smartphone</h3><p>Latest smartphone with stunning features.</p><button>Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Headphones"><h3>Headphones</h3><p>Noise-cancelling wireless headphones.</p><button>Add to Cart</button></div>
+    </div>
+  </div>
+
+  <div class="products-section">
+    <h2>Home Utilities</h2>
+    <div class="grid">
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Washing Machine"><h3>Washing Machine</h3><p>Smart washing machine with AI wash.</p><button>Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Microwave"><h3>Microwave Oven</h3><p>Quick and efficient cooking solution.</p><button>Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Vacuum Cleaner"><h3>Vacuum Cleaner</h3><p>Powerful cleaner for your home.</p><button>Add to Cart</button></div>
+    </div>
+  </div>
+
+  <div class="products-section">
+    <h2>Groceries</h2>
+    <div class="grid">
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Rice"><h3>Rice</h3><p>Premium quality basmati rice.</p><button>Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Vegetables"><h3>Fresh Vegetables</h3><p>Organic and farm-fresh veggies.</p><button>Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Snacks"><h3>Snacks</h3><p>Tasty and crunchy snacks for everyone.</p><button>Add to Cart</button></div>
+    </div>
+  </div>
+</body>
+</html>
